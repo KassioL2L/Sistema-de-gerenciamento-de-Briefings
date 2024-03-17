@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { getAllBriefings } from '../../services/api';
+import './BriefingList.css';
 
 const BriefingList = () => {
     const [briefings, setBriefings] = useState([]);
@@ -19,9 +20,9 @@ const BriefingList = () => {
     }, []);
 
     return (
-        <div>
+        <div  className="briefingList-container">
             {briefings.map(briefing => (
-                <div key={briefing.id}>
+                <div  className="briefing-box" key={briefing.id}>
                     <h3>{briefing.clientName}</h3>
                     <p>{briefing.description}</p>
                     <p>{briefing.dateTime}</p>
