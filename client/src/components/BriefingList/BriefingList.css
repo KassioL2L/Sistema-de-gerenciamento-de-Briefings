@@ -14,3 +14,43 @@
     width: 13rem;
     height: 5rem;
 }
+
+  
+  .modal-content {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-content input,
+  .modal-content textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .modal-content button {
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 13.5rem;
+  }
+
+
+  
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+  
