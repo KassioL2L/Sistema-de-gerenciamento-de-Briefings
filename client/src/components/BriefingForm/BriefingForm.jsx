@@ -1,5 +1,6 @@
 import  { useState } from 'react';
 import { updateBriefingById, createBriefing } from '../../services/api';
+import './BriefingForm.css';
 
 /* eslint-disable react/prop-types */
 const BriefingForm = ({ id }) => { 
@@ -30,7 +31,7 @@ const BriefingForm = ({ id }) => {
     };
 
     return (
-        <div>
+        <div  className="container">
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
