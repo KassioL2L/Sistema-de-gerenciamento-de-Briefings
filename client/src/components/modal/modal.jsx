@@ -9,13 +9,13 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    maxWidth: '80%', // Definindo largura máxima para 80%
-    maxHeight: '80%', // Definindo altura máxima para 80%
-    overflow: 'auto', // Adicionando overflow para permitir rolagem se necessário
-    padding: '20px', // Adicionando padding para afastar o conteúdo das bordas
+    maxWidth: '80%', 
+    maxHeight: '80%', 
+    overflow: 'auto', 
+    padding: '20px', 
   },
   overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Definindo uma cor de fundo semi-transparente para o overlay
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
  
 };
