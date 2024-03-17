@@ -1,0 +1,28 @@
+header {
+    border: 1px solid #6272a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 10vh;
+    background-color: #282a36;
+}
+
+h1 {
+    color: #f8f8f2;
+}
+
+header button {
+    margin: 0 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #44475a;
+    cursor: pointer;
+    color: #f8f8f2;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #bd93f9;
+}
