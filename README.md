@@ -12,7 +12,7 @@
 https://github.com/KassioL2L/Desafio-Proj.-VivaMoveis.git
 
 3. Na pasta server do projeto, instale as dependências executando o seguinte comando no terminal:
--npm install
+npm install
 
 ### Executando o Servidor
 Para rodar o servidor, execute o seguinte comando:
