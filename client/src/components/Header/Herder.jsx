@@ -1,20 +1,24 @@
-import { useState } from 'react';
-import  BriefingForm  from '../BriefingForm/BriefingForm'; 
+import  { useState } from 'react';
+import Modal from '../modal/modal'; 
+import BriefingForm from '../BriefingForm/BriefingForm';
 import './Herder.css';
 
 const Header = () => {
-    const [showForm, setShowForm] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
-    const toggleForm = () => {
-        setShowForm(!showForm);
+    const toggleModal = () => {
+        setShowModal(!showModal);
     };
 
     return (
         <header>
             <h1>Gerenciamento de Briefing</h1>
-            <button onClick={toggleForm}>Cadastrar Briefing</button>
-            {showForm && <BriefingForm />}
+            <button onClick={toggleModal}>Cadastrar Briefing</button>
+            <Modal isOpen={showModal} onClose={toggleModal}>
+                <BriefingForm />
+            </Modal>
         </header>
     );
 };
+
 export default Header;
