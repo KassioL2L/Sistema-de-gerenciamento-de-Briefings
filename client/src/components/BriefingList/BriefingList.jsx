@@ -66,8 +66,8 @@ const BriefingList = () => {
                     <p>{briefing.description}</p>
                     <p>{briefing.dateTime}</p>
                     <div className="options">
-                        <button onClick={() => handleOpenModal(briefing)}>Editar</button>
-                        <button onClick={() => handleDeleteBriefing(briefing.id)}>Excluir</button>
+                        <button className="button-edit" onClick={() => handleOpenModal(briefing)}>Editar</button>
+                        <button className="button-delete" onClick={() => handleDeleteBriefing(briefing.id)}>Excluir</button>
                     </div>
                 </div>
             ))}
