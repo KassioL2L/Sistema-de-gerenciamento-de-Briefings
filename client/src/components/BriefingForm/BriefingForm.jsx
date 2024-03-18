@@ -3,7 +3,7 @@ import { updateBriefingById, createBriefing } from '../../services/api';
 import './BriefingForm.css';
 
 /* eslint-disable react/prop-types */
-const BriefingForm = ({ id }) => {
+const BriefingForm = ({ id, onCloseModal }) => {
     const [clientName, setClientName] = useState('');
     const [description, setDescription] = useState('');
     const [dateTime] = useState(new Date().toISOString());
@@ -32,6 +32,9 @@ const BriefingForm = ({ id }) => {
             } else {
                 await createBriefing(briefingData);
             }
+
+            // Após o envio bem-sucedido, chame a função onCloseModal para fechar o modal
+            onCloseModal();
         } catch (error) {
             console.error(error);
         }
