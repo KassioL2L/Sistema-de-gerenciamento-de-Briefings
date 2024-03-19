@@ -26,7 +26,7 @@ const BriefingList = () => {
     const handleDeleteBriefing = async (briefingId) => {
         try {
             await deleteBriefingById(briefingId);
-            setBriefings(briefings.filter(briefing => briefing.id !== briefingId));
+            setBriefings(briefings.filter(briefing => briefing._id !== briefingId));
         } catch (error) {
             console.error(error);
         }
@@ -39,8 +39,8 @@ const BriefingList = () => {
                 clientName: editedClientName,
                 description: editedDescription
             };
-            await updateBriefingById(selectedBriefing.id, updatedBriefing);
-            setBriefings(briefings.map(b => (b.id === selectedBriefing.id ? updatedBriefing : b)));
+            await updateBriefingById(selectedBriefing._id, updatedBriefing);
+            setBriefings(briefings.map(b => (b._id === selectedBriefing._id ? updatedBriefing : b)));
             toggleModal();
         } catch (error) {
             console.error(error);
@@ -61,13 +61,13 @@ const BriefingList = () => {
     return (
         <div className="briefingList-container">
             {briefings.map(briefing => (
-                <div className="briefing-box" key={briefing.id}>
+                <div className="briefing-box" key={briefing._id}>
                     <h3>{briefing.clientName}</h3>
                     <p>{briefing.description}</p>
                     <p>{briefing.dateTime}</p>
                     <div className="options">
                         <button className="button-edit" onClick={() => handleOpenModal(briefing)}>Editar</button>
-                        <button className="button-delete" onClick={() => handleDeleteBriefing(briefing.id)}>Excluir</button>
+                        <button className="button-delete" onClick={() => handleDeleteBriefing(briefing._id)}>Excluir</button>
                     </div>
                 </div>
             ))}
