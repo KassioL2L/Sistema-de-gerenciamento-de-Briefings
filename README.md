@@ -9,9 +9,9 @@
 1. Certifique-se de ter o Node.js instalado na sua máquina. Você pode baixá-lo em [nodejs.org](https://nodejs.org/).
 
 2. Clone este repositório:
-https://github.com/KassioL2L/Desafio-Proj.-VivaMoveis.git
+https://github.com/KassioL2L/Sistema-de-gerenciamento-de-Briefings.git
 
-3. Na pasta server do projeto, instale as dependências executando o seguinte comando no terminal:
+4. Na pasta server do projeto, instale as dependências executando o seguinte comando no terminal:
 npm install
 
 ### Executando o Servidor
