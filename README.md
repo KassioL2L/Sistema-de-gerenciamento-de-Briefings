@@ -50,7 +50,6 @@ Isso iniciará o servidor de desenvolvimento do React, que será acessível em `
 - Node.js
 - Express
 - MongoDB (Mongoose)
-- CORS
 
 ### Front-end
 
