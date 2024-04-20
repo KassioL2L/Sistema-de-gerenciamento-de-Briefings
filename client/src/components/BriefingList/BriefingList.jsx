@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getAllBriefings, deleteBriefingById, updateBriefingById } from '../../services/api';
-import Modal from '../modal/modal';
+import Modal from '../Modal/Modal';
 import './BriefingList.css';
 
 const BriefingList = () => {
@@ -9,6 +9,7 @@ const BriefingList = () => {
     const [showModal, setShowModal] = useState(false);
     const [editedClientName, setEditedClientName] = useState('');
     const [editedDescription, setEditedDescription] = useState('');
+    const [showOptionsId, setShowOptionsId] = useState(null);
 
     useEffect(() => {
         const fetchBriefings = async () => {
@@ -58,17 +59,32 @@ const BriefingList = () => {
         toggleModal();
     };
 
+    const handleToggleOptions = (id) => {
+        setShowOptionsId(showOptionsId === id ? null : id);
+    };
+
+    const formatDate = (isoString) => {
+        const date = new Date(isoString);
+        return date.toLocaleDateString('pt-BR', {
+            year: 'numeric', month: 'long', day: 'numeric',
+            hour: '2-digit', minute: '2-digit', second: '2-digit'
+        });
+    };
+
     return (
         <div className="briefingList-container">
             {briefings.map(briefing => (
                 <div className="briefing-box" key={briefing._id}>
+                    {showOptionsId === briefing._id && (
+                        <div className="options-container">
+                            <button className="button-edit" onClick={() => handleOpenModal(briefing)}>Editar</button>
+                            <button className="button-delete" onClick={() => handleDeleteBriefing(briefing._id)}>Excluir</button>
+                        </div>
+                    )}
+                    <button onClick={() => handleToggleOptions(briefing._id)} className="options-toggle">...</button>
                     <h3>{briefing.clientName}</h3>
                     <p>{briefing.description}</p>
-                    <p>{briefing.dateTime}</p>
-                    <div className="options">
-                        <button className="button-edit" onClick={() => handleOpenModal(briefing)}>Editar</button>
-                        <button className="button-delete" onClick={() => handleDeleteBriefing(briefing._id)}>Excluir</button>
-                    </div>
+                    <p>{formatDate(briefing.dateTime)}</p>
                 </div>
             ))}
             <Modal isOpen={showModal} onClose={toggleModal}>
