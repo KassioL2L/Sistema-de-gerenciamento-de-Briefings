@@ -32,7 +32,7 @@ const CustomModal = ({ isOpen, onClose, children }) => {
       contentLabel="Cadastrar Briefing"
     >
       {children}
-      <button className='custom-button' onClick={onClose}>Fechar Modal</button>
+      <button className='custom-button' onClick={onClose}>Fechar</button>
     </Modal>
   );
 };
