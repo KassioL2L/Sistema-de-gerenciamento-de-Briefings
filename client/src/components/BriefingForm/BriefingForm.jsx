@@ -55,7 +55,7 @@ const BriefingForm = ({ id, onCloseModal }) => {
                     placeholder="Descrição"
                 />
                 <p>Data/Hora: {new Date(dateTime).toLocaleString()}</p>
-                <button type="submit">Submit</button>
+                <button type="submit">Criar</button>
             </form>
         </div>
     );

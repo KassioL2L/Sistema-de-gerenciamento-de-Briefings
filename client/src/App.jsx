@@ -1,15 +1,11 @@
 import './App.css'
-import Header from './components/Header/Herder'
-import BriefingList from './components/BriefingList/BriefingList'
+import Home from './pages/Home/Home'
 
 function App() {
 
   return (
     <>
-      <div>
-      <Header />
-      <BriefingList />
-      </div>
+      <Home />
     </>
   )
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Modal from '../modal/modal'; 
 import BriefingForm from '../BriefingForm/BriefingForm';
-import './Herder.css';
+import './Header.css';
 
 const Header = () => {
     const [showModal, setShowModal] = useState(false);
