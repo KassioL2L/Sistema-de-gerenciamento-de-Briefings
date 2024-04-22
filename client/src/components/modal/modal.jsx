@@ -1,5 +1,5 @@
 import Modal from 'react-modal';
-import './Modal.css';
+import './modal.css';
 
 const customStyles = {
   content: {
@@ -9,15 +9,15 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    maxWidth: '80%', 
-    maxHeight: '80%', 
-    overflow: 'auto', 
-    padding: '20px', 
+    maxWidth: '80%',
+    maxHeight: '80%',
+    overflow: 'auto',
+    padding: '20px',
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
- 
+
 };
 
 Modal.setAppElement('#root');
