@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getAllBriefings, deleteBriefingById, updateBriefingById } from '../../services/api';
-import Modal from '../Modal/Modal';
+import Modal from '../modal/modal';
 import './BriefingList.css';
 
 const BriefingList = () => {

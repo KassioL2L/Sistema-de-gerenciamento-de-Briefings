@@ -1,6 +1,6 @@
 // Importações necessárias
 import { useState } from 'react';
-import Modal from '../Modal/Modal';
+import Modal from '../modal/modal';
 import BriefingForm from '../BriefingForm/BriefingForm';
 import './Header.css';
 
