@@ -1,4 +1,4 @@
-# Desafio-Proj.-VivaMoveis
+# Sistema de gerenciamento de Briefings
 
 ## Aqui você encontrará informações sobre como instalar e executar meu projeto.
 
