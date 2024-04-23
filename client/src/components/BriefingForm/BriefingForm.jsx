@@ -14,11 +14,7 @@ const BriefingForm = ({ id, onCloseModal }) => {
         const newId = id || generateId();
         const briefingData = { id: newId, clientName, description, dateTime };
         try {
-            if (id) {
-                await updateBriefingById(id, briefingData);
-            } else {
-                await createBriefing(briefingData);
-            }
+            await createBriefing(briefingData);
             onCloseModal();
         } catch (error) {
             console.error(error);
