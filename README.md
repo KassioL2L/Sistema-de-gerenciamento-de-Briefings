@@ -56,6 +56,8 @@ Isso iniciará o servidor de desenvolvimento do React, que será acessível em `
 - React
 - React Modal
 - Axios
+- React icons
+- React Router
 
 ## Licença
 
