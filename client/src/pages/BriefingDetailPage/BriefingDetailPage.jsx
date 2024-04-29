@@ -4,7 +4,7 @@ import './BriefingDetailPage.css';
 
 function BriefingDetailPage() {
     return (
-        <div>
+        <div className="briefing-detail-container">
             <BriefingDetail/>
         </div>
     );
