@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getAllBriefings, deleteBriefingById, updateBriefingById } from '../../services/api';
 import Modal from '../Modal/Modal';
+import { MdSettings } from 'react-icons/md'; // Importar o ícone de configurações
 import './BriefingList.css';
 
 const BriefingList = () => {
@@ -81,7 +82,9 @@ const BriefingList = () => {
                             <button className="button-delete" onClick={() => handleDeleteBriefing(briefing._id)}>Excluir</button>
                         </div>
                     )}
-                    <button onClick={() => handleToggleOptions(briefing._id)} className="options-toggle">...</button>
+                    <button onClick={() => handleToggleOptions(briefing._id)} className="options-toggle">
+                        <MdSettings /> {/* Substituir "..." por ícone */}
+                    </button>
                     <h3>{briefing.clientName}</h3>
                     <p>{briefing.description}</p>
                     <p>{formatDate(briefing.dateTime)}</p>
