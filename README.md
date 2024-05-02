@@ -58,6 +58,7 @@ Isso iniciará o servidor de desenvolvimento do React, que será acessível em `
 - Axios
 - React icons
 - React Router
+- Context Api
 
 ## Licença
 
