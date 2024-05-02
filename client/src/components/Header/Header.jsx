@@ -13,6 +13,7 @@ const Header = () => {
     const toggleModal = () => setShowModal(!showModal);
     const handleCloseModal = () => {
         setShowModal(false);
+        window.location.reload();
     };
 
     const handleLogout = () => {
