@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext({
   user: null,
@@ -11,11 +11,16 @@ export function useAuth() {
 }
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem('user');
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
 
   const login = (username, password) => {
     if (username === 'admin' && password === 'admin') {
-      setUser({ username });
+      const user = { username };
+      setUser(user);
+      localStorage.setItem('user', JSON.stringify(user));  
       return true;
     }
     return false;
@@ -23,6 +28,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     setUser(null);
+    localStorage.removeItem('user'); 
   };
 
   return (
