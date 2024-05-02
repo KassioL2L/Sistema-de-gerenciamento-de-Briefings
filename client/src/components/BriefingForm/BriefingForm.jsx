@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { updateBriefingById, createBriefing } from '../../services/api';
+import { useEffect, useState } from 'react';
+import { createBriefing } from '../../services/api';
 import './BriefingForm.css';
 
 const BriefingForm = ({ id, onCloseModal }) => {
