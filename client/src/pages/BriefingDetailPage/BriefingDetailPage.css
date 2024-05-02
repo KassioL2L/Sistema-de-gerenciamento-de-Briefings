@@ -9,4 +9,5 @@
     min-width: 50rem;
     margin: 2rem auto;
     padding: 0;
+    word-break: break-word;
 }

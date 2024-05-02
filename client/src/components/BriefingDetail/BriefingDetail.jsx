@@ -30,11 +30,11 @@ const BriefingDetail = () => {
 };
 
   return (
-    <div className="briefing-detail-container">
+    <>
       <h1>{briefing.clientName}</h1>
       <p>{briefing.description}</p>
       <p>{formatDate(briefing.dateTime)}</p>
-    </div>
+    </>
   );
 };
 

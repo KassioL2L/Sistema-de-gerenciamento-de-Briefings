@@ -1,0 +1,50 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282a36; /* Dracula background color */
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    gap: 1rem;
+    border-radius: 5px;
+    background-color: #44475a; /* Dracula selection color */
+  }
+
+  .login-form h2 {
+    align-items: center;
+    color: #f8f8f2; 
+    text-align: center;
+
+  }
+  
+  .login-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6272a4; 
+    color: #f8f8f2; 
+    font-size: 16px;
+  }
+  .login-form input::placeholder{
+    color: #f8f8f2;
+  }
+  
+  .login-button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #50fa7b; 
+    color: #282a36;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline: none;
+  }
+  
