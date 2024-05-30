@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 // Middleware CORS para permitir solicitações somente da origem 5173
 app.use(cors({
-  origin: 'http://localhost:5173'
+  origin: '*'
 }));
 
 // Rotas da API de briefings
